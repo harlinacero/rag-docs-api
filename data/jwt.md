@@ -1,0 +1,3 @@
+Access tokens should be short lived, typically between five and fifteen minutes. A short lifetime limits the damage if a token is stolen, because a JWT cannot be revoked easily once it is issued. The API validates the signature, the expiry and the audience of every access token before it trusts any claim inside it.
+
+A refresh token is long lived and is used only to obtain new access tokens. It should be stored in an httpOnly cookie so that JavaScript cannot read it. With refresh token rotation, every use of a refresh token returns a new one and invalidates the old one. If an old refresh token is presented again, the server can treat it as theft and revoke the whole token family.
