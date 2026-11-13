@@ -1,5 +1,8 @@
 # Ask My Docs: a small RAG API with FastAPI
 
+[![CI](https://github.com/harlinacero/rag-docs-api/actions/workflows/ci.yml/badge.svg)](https://github.com/harlinacero/rag-docs-api/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 A minimal retrieval-augmented generation (RAG) service. You upload documents, ask questions, and get answers **grounded in those documents**, with the sources that support each answer.
 
 It is a learning and portfolio project: small enough to read in an afternoon, with the same building blocks a production RAG system has.
@@ -102,3 +105,7 @@ uvicorn app.main:app
 3. Add hybrid search (BM25 + embeddings) and a re-ranker.
 4. Stream answers, add authentication and per-tenant isolation.
 5. Add structured logging without storing document text or personal data.
+
+## License
+
+[MIT](LICENSE)
